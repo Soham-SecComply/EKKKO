@@ -27,15 +27,15 @@ export default function HomePage() {
 
         {/* Content pinned to bottom of hero */}
         <div className="container" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 2, paddingBottom: 'clamp(32px, 4vw, 60px)' }}>
-          <div className="reveal" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', gap: 'clamp(24px, 3vw, 48px)', flexWrap: 'wrap' }}>
-            <div>
-              <p className="h-display" style={{ fontSize: 'clamp(40px, 6vw, 80px)', color: 'rgba(255,255,255,0.8)', lineHeight: 0.9, marginBottom: '20px', whiteSpace: 'nowrap' }}>Where Ideas</p>
+          <div className="reveal" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', gap: 'clamp(32px, 4vw, 60px)' }}>
+            <div style={{ flexShrink: 0 }}>
+              <p className="h-display" style={{ fontSize: 'clamp(36px, 5vw, 72px)', color: 'rgba(255,255,255,0.8)', lineHeight: 0.9, marginBottom: '20px', whiteSpace: 'nowrap' }}>Where Ideas</p>
               <div className="reveal reveal-d1" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <Link href="/collaborate" className="btn btn--primary">Start a Project</Link>
                 <Link href="/about" className="btn btn--outline" style={{ borderColor: 'white', color: 'white' }}>Our Story</Link>
               </div>
             </div>
-            <h1 className="h-display grad-text" style={{ fontSize: 'clamp(80px, 15vw, 200px)', lineHeight: 0.85, letterSpacing: '-0.04em', margin: 0 }}>EKKKO</h1>
+            <h1 className="h-display grad-text" style={{ fontSize: 'clamp(72px, 12vw, 160px)', lineHeight: 0.85, letterSpacing: '-0.04em', margin: 0, flexShrink: 0 }}>EKKKO</h1>
           </div>
         </div>
       </section>

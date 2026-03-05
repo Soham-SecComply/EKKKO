@@ -3,7 +3,8 @@
    Bold. Colorful. Electric. Creative.
    ═══════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=zodiak@400,500,600,700,800&display=swap');
 
 /* ─── VARIABLES ──────────────────────────────────────────── */
 :root {
@@ -51,7 +52,7 @@
   --grad-text: linear-gradient(135deg, #FF6B35, #F7C948, #FF6B35);
 
   /* Typography */
-  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-display: 'Zodiak', serif;
   --font-body: 'Outfit', sans-serif;
 
   /* Spacing */
