@@ -122,7 +122,7 @@ export const IMAGES = {
   heroVideo: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&h=900&fit=crop',
   heroBg: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&h=900&fit=crop',
   aboutHero: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&h=900&fit=crop',
-  aboutFounder: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=750&fit=crop',
+  aboutFounder: 'https://ik.imagekit.io/nprf964by/SecComply/PBP_8254.jpg?updatedAt=1767936444991',
   collaborateHero: 'https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=1600&h=900&fit=crop',
   socialDivider: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1600&h=600&fit=crop',
   divider1: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&h=600&fit=crop',
