@@ -49,31 +49,37 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ─── INTRO / WHAT WE DO ───────────────────────── */}
+      {/* ─── WHAT WE DO — Glassmorphism Info Cards ──── */}
       <section className="section">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }}>
-            <div className="reveal">
-              <p className="overline overline--color mb-16">What We Do</p>
-              <h2 className="h-display h3 mb-24">We don&apos;t just create content.<br />We architect <span className="grad-text">perception.</span></h2>
-              <p className="body-lg mb-32">Every brand has a story. Most tell it wrong. We help companies find the narrative thread that connects their vision to their audience — then amplify it across every touchpoint.</p>
-              <Link href="/collaborate" className="btn-arrow">See Our Services <Arrow /></Link>
-            </div>
-            <div className="stagger" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-              <div className="color-card color-card--violet hover-tilt" style={{ gridRow: 'span 2', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
-                <div style={{ fontSize: '48px', marginBottom: '12px' }}>◆</div>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px' }}>Growth</div>
-                <p style={{ fontSize: '14px', opacity: 0.8, marginTop: '4px' }}>Strategic business growth frameworks</p>
+          <div className="section-heading center reveal">
+            <p className="overline overline--color mb-12">What We Do</p>
+            <h2 className="h-display h3">We don&apos;t just create content.<br />We architect <span className="grad-text">perception.</span></h2>
+          </div>
+          <div className="info-cards stagger">
+            {[
+              { title: 'Business Growth', icon: '◆', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=750&fit=crop', desc: 'Strategic growth frameworks that scale your visibility, revenue, and market positioning to new heights.' },
+              { title: 'Digital Presence', icon: '●', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=750&fit=crop', desc: 'Systematic optimization of how your brand shows up across every digital touchpoint that matters.' },
+              { title: 'Podcast Production', icon: '■', image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=600&h=750&fit=crop', desc: 'End-to-end podcast strategy, production, and distribution that builds real relationships.' },
+              { title: 'Founder Positioning', icon: '★', image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=750&fit=crop', desc: 'Turning founders into recognized industry voices through authentic personal brand development.' },
+            ].map((card, i) => (
+              <div key={i} className="info-card">
+                <img src={card.image} alt={card.title} className="info-card__bg" />
+                <div className="info-card__default">
+                  <span className="info-card__icon">{card.icon}</span>
+                  <h3 className="info-card__title">{card.title}</h3>
+                </div>
+                <div className="info-card__reveal">
+                  <span className="info-card__icon">{card.icon}</span>
+                  <h3 className="info-card__title">{card.title}</h3>
+                  <p className="info-card__desc">{card.desc}</p>
+                  <span className="info-card__cta">Learn more →</span>
+                </div>
               </div>
-              <div className="color-card color-card--coral hover-tilt">
-                <div style={{ fontSize: '32px', marginBottom: '8px' }}>▲</div>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Alliances</div>
-              </div>
-              <div className="color-card color-card--cyan hover-tilt">
-                <div style={{ fontSize: '32px', marginBottom: '8px' }}>●</div>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Digital</div>
-              </div>
-            </div>
+            ))}
+          </div>
+          <div className="text-center reveal" style={{ marginTop: '40px' }}>
+            <Link href="/collaborate" className="btn-arrow">See All Services <Arrow /></Link>
           </div>
         </div>
       </section>
@@ -86,27 +92,6 @@ export default function HomePage() {
               <div key={s.label} className="stat-box">
                 <div className="stat-box__number h-display counter" style={{ color: 'var(--cyan)' }}>{s.number}</div>
                 <div className="stat-box__label">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SERVICES ─────────────────────────────────── */}
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section-heading center reveal">
-            <p className="overline overline--color mb-12">Services</p>
-            <h2 className="h-display h3">Everything your story needs</h2>
-            <p>End-to-end strategy for the companies shaping tomorrow.</p>
-          </div>
-          <div className="grid grid--3 stagger">
-            {SERVICES.map((s, i) => (
-              <div key={i} className="service-card hover-shine">
-                <div className="service-card__num">0{i + 1}</div>
-                <div className="service-card__icon">{s.icon}</div>
-                <h3 className="service-card__title">{s.title}</h3>
-                <p className="service-card__desc">{s.desc}</p>
               </div>
             ))}
           </div>

@@ -83,8 +83,8 @@ export function useAnimations() {
       let mx = 0, my = 0, cx = 0, cy = 0;
       const onMove = (e) => { mx = e.clientX; my = e.clientY; };
       const loop = () => {
-        cx += (mx - cx) * 0.15;
-        cy += (my - cy) * 0.15;
+        cx += (mx - cx) * 0.35;
+        cy += (my - cy) * 0.35;
         cursor.style.transform = `translate(${cx}px, ${cy}px)`;
         requestAnimationFrame(loop);
       };
