@@ -16,7 +16,7 @@ export default function HomePage() {
         {/* YouTube video background */}
         <div style={{ position: 'absolute', inset: 0, zIndex: 0, overflow: 'hidden' }}>
           <iframe
-            src="https://www.youtube.com/embed/xNdQ_Je7v0E?autoplay=1&mute=1&loop=1&playlist=xNdQ_Je7v0E&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3&start=0"
+            src="https://www.youtube.com/embed/wYBnII2EJ_c?autoplay=1&mute=1&loop=1&playlist=wYBnII2EJ_c&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3&start=0"
             allow="autoplay; encrypted-media"
             allowFullScreen
             style={{ position: 'absolute', top: '50%', left: '50%', width: '120vw', height: '120vh', transform: 'translate(-50%, -50%)', border: 'none', pointerEvents: 'none' }}
