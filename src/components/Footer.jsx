@@ -11,10 +11,6 @@ export default function Footer() {
           <div>
             <div className="footer__brand-name"><span>EKKKO</span></div>
             <p className="footer__brand-desc">{SITE.description}</p>
-            <a href={SITE.parent.url} target="_blank" rel="noopener noreferrer" className="powered-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              A {SITE.parent.name} Initiative
-            </a>
           </div>
           <div>
             <h4 className="footer__heading">Navigate</h4>
@@ -26,11 +22,10 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="footer__heading">Get In Touch</h4>
-            <a href={`mailto:${SITE.email}`} className="footer__link">{SITE.email}</a>
-            <p className="footer__link">{SITE.phone}</p>
+            <a href="mailto:thenadkarnees@gmail.com" className="footer__link">thenadkarnees@gmail.com</a>
             <p className="footer__link">{SITE.location}</p>
             <div className="footer__social" style={{ marginTop: '16px' }}>
-              {SOCIALS.slice(0, 4).map((s) => (
+              {SOCIALS.slice(0, 5).map((s) => (
                 <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="footer__social-icon" dangerouslySetInnerHTML={{ __html: s.svg }} />
               ))}
             </div>
