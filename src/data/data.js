@@ -16,11 +16,10 @@ export const SITE = {
 
 export const NAV = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Blogs', href: '/blogs' },
   { label: 'Podcast', href: '/podcast' },
-  { label: 'Social', href: '/social' },
+  { label: 'About', href: '/about' },
   { label: 'Collaborate', href: '/collaborate' },
+  { label: 'Social', href: '/social' },
 ];
 
 export const SOCIALS = [

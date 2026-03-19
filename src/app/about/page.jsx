@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { SITE, TIMELINE, STATS, IMAGES } from '@/data/data';
+import { SITE, STATS, IMAGES } from '@/data/data';
 
 export default function AboutPage() {
   return (
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 'clamp(40px,6vw,80px)', alignItems: 'center' }}>
             <div className="reveal--left reveal" style={{ borderRadius: 'var(--radius-lg)', overflow: 'hidden', position: 'relative' }}>
-              <img src={IMAGES.aboutFounder} alt={SITE.founder} style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
+              <img src="https://ik.imagekit.io/nprf964by/SecComply/PBP_8254.jpg?updatedAt=1767936444991" alt={SITE.founder} style={{ width: '100%', aspectRatio: '4/5', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)', borderRadius: 'var(--radius-sm)', padding: '16px 20px' }}>
                 <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{SITE.founder}</div>
                 <div style={{ fontSize: '14px', color: 'var(--violet)', fontWeight: 500 }}>{SITE.founderRole}</div>
@@ -74,21 +74,36 @@ export default function AboutPage() {
 
       <div className="image-divider"><img src={IMAGES.divider1} alt="" className="parallax-target" data-speed="0.1" /></div>
 
-      {/* ─── TIMELINE ─── */}
+      {/* ─── OUR TEAM ─── */}
       <section className="section">
-        <div className="container" style={{ maxWidth: '700px' }}>
+        <div className="container">
           <div className="section-heading center reveal">
-            <p className="overline overline--color mb-12">The Journey</p>
-            <h2 className="h-display h3">Our Timeline</h2>
+            <p className="overline overline--color mb-12">The People</p>
+            <h2 className="h-display h3">Our Team</h2>
+            <p>The minds behind the narratives.</p>
           </div>
-          <div className="timeline stagger">
-            {TIMELINE.map((t) => (
-              <div key={t.year} className="timeline__item">
-                <div className="timeline__dot"></div>
-                <div className="timeline__year">{t.year}</div>
-                <h3 className="timeline__title">{t.title}</h3>
-                <p className="timeline__desc">{t.desc}</p>
-              </div>
+          <div className="grid grid--3 stagger">
+            {[
+              { name: SITE.founder, role: SITE.founderRole, image: 'https://ik.imagekit.io/nprf964by/SecComply/PBP_8254.jpg?updatedAt=1767936444991', linkedin: 'https://www.linkedin.com/in/shivani-tikadia-nadkarni/',
+                bio: 'Visionary behind EKKKO. Bridging cybersecurity expertise with creative strategy to build narratives that move markets.' },
+              { name: 'Bhavishya', role: 'Video Editor & Content Strategist', image: 'https://ik.imagekit.io/nprf964by/SecComply/Bhavishya', linkedin: 'https://www.linkedin.com/in/anagatsingh/',
+                bio: 'Social media growth strategist building AI-powered omnichannel content systems. From scripts to shorts — full-cycle execution across every platform.' },
+              { name: 'Aditi Saw', role: 'Content & Marketing Executive', image: 'https://ik.imagekit.io/nprf964by/SecComply/Aditi.jpg', linkedin: 'https://www.linkedin.com/in/aditisaw/',
+                bio: 'Content writer and marketing executive driving brand storytelling, SEO content, and digital marketing campaigns that connect and convert.' },
+            ].map((member, i) => (
+              <a key={i} href={member.linkedin} target="_blank" rel="noopener noreferrer" className="team-card reveal">
+                <div className="team-card__image">
+                  <img src={member.image} alt={member.name} />
+                  <div className="team-card__linkedin">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.5A1.75 1.75 0 118.3 6.8a1.72 1.72 0 01-1.8 1.7zM20 19h-3v-4.4c0-1-.4-1.7-1.3-1.7a1.4 1.4 0 00-1.3 1 1.7 1.7 0 00-.1.6V19h-3s0-8.1 0-9h3v1.3a3 3 0 012.7-1.5c2 0 3.4 1.3 3.4 4V19z"/></svg>
+                  </div>
+                </div>
+                <div className="team-card__info">
+                  <h3 className="team-card__name">{member.name}</h3>
+                  <p className="team-card__role">{member.role}</p>
+                  <p className="team-card__bio">{member.bio}</p>
+                </div>
+              </a>
             ))}
           </div>
         </div>
